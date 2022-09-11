@@ -18,3 +18,11 @@ export const showFutures = async (page: puppeteer.Page, delaySecs?: number): Pro
     })
     await delay(delaySecs || DefaultDelaySecs);
 }
+
+export const showCrypto = async (page: puppeteer.Page, delaySecs?: number): Promise<void> => {
+    await page.goto('https://finviz.com/crypto.ashx');
+    await page.$eval('table.header', (e) => {
+        e.remove();
+    })
+    await delay(delaySecs || DefaultDelaySecs);
+}

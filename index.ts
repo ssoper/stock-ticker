@@ -2,7 +2,8 @@ import * as puppeteer from "puppeteer";
 import { logger } from './src/logger';
 import {
     showSpyMap,
-    showFutures
+    showFutures,
+    showCrypto
 } from './src/finviz';
 
 (async () => {
@@ -24,7 +25,9 @@ import {
     const browser = await puppeteer.launch(options);
     const page = await browser.newPage();
 
-    await showSpyMap(page);
-    await showFutures(page);
-
+    while (true) {
+        await showSpyMap(page);
+        await showFutures(page);
+        await showCrypto(page);
+    }
 })();
