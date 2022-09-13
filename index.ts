@@ -1,10 +1,11 @@
-import * as puppeteer from "puppeteer";
+import * as puppeteer from 'puppeteer';
 import { logger } from './src/logger';
 import {
     showSpyMap,
     showFutures,
     showCrypto
 } from './src/finviz';
+import { executablePath } from './src/chrome';
 
 (async () => {
     process.on('SIGINT', async () => {
@@ -21,6 +22,8 @@ import {
     if (process.env.NODE_ENV === 'production') {
         options.args = ['--start-fullscreen'];
     }
+
+    options.executablePath = executablePath();
 
     const browser = await puppeteer.launch(options);
     const page = await browser.newPage();

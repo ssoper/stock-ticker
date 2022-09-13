@@ -11,9 +11,7 @@ Display stock prices on a screen
 
 ### Code
 
-* Show futures only before 9:30am eastern and after 6pm eastern, rotate to all screens after
-* Increase delay on prod
-* Some pages should zoom in to element
+* Do not show market map before 10am eastern or after 6pm eastern
 * Lint/pretty
 
 ### Raspberry Pi
@@ -22,3 +20,4 @@ Display stock prices on a screen
 * Create an image that includes node 18
 * Don't let monitor or pi go to sleep
 * Replace Raspberry Pi 4 with a 2W Zero
+* Autostart
