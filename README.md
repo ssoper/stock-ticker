@@ -19,7 +19,6 @@ Display stock prices on a screen
 
 * Create dead simple deployment scheme (dev -> master, rasbpi checks for git hash, pulls)
 * Create an image that includes node 18
-* Don't let monitor or pi go to sleep
 * Replace Raspberry Pi 4 with a 2W Zero
 * Autostart
     * Check for new version before start and downloads it (git pull)

@@ -8,8 +8,6 @@ const LinuxPath = '/usr/bin/chromium-browser';
 export const executablePath = (): string | undefined => {
     const os = platform();
 
-    console.log(os)
-
     if (os === 'darwin' && fs.existsSync(MacOSPath)) {
         return MacOSPath
     } else if (os === 'linux' && fs.existsSync(LinuxPath)) {

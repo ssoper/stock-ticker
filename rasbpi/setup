@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Disable power saving and screen savers
-xset s noblank
-xset s off
-xset -dpms
+# Download nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.profile
+nvm use 18
