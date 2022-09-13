@@ -2,7 +2,7 @@ import { platform } from 'os';
 import * as fs from 'fs';
 
 const MacOSPath = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome';
-const LinuxPath = '/usr/bin/google-chrome';
+const LinuxPath = '/usr/bin/chromium-browser';
 
 export const executablePath = (): string | undefined => {
     const os = platform();
