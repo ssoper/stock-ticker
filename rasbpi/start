@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 STOCK_TICKER_HOME="$HOME/stock-ticker"
+CHROMIUM_PORT=9123
 
 # Disable power saving and screen savers
 xset s noblank
@@ -10,4 +11,7 @@ xset -dpms
 # Update
 cd "$STOCK_TICKER_HOME"
 git pull
-NODE_ENV=production yarn start
+
+# Start
+chromium-browser --start-fullscreen --remote-debugging-port="$CHROMIUM_PORT"
+CHROMIUM_PORT="$CHROMIUM_PORT" NODE_ENV=production yarn start

@@ -1,4 +1,4 @@
-import * as puppeteer from "puppeteer";
+import * as puppeteer from "puppeteer-core";
 import { delay } from "./delay";
 
 const DefaultDelaySecs = process.env.NODE_ENV === 'production' ? 300 : 10;

@@ -1,11 +1,15 @@
-import * as puppeteer from 'puppeteer';
 import { logger } from './src/logger';
 import {
     showSpyMap,
     showFutures,
     showCrypto
 } from './src/finviz';
-import { executablePath } from './src/chrome';
+import { getBrowser } from './src/browser';
+
+// verify that you can run scripts from start script in LXGE session
+// for local dev, simplify code
+// for production, use connection
+// add command line args for chrome in production
 
 (async () => {
     process.on('SIGINT', async () => {
@@ -14,18 +18,7 @@ import { executablePath } from './src/chrome';
         process.exit();
     })
 
-    const options = {
-        headless: false,
-        defaultViewport: null
-    } as puppeteer.PuppeteerLaunchOptions
-
-    if (process.env.NODE_ENV === 'production') {
-        options.args = ['--start-fullscreen'];
-    }
-
-    options.executablePath = executablePath();
-
-    const browser = await puppeteer.launch(options);
+    const browser = await getBrowser();
     const page = await browser.newPage();
 
     while (true) {
