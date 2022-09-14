@@ -11,6 +11,7 @@ xset -dpms
 # Update
 cd "$STOCK_TICKER_HOME"
 git pull
+yarn
 
 # Start
 chromium-browser --start-fullscreen --remote-debugging-port="$CHROMIUM_PORT"
