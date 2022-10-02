@@ -5,6 +5,7 @@ import {
     showCrypto
 } from './src/finviz';
 import { getBrowser } from './src/browser';
+import { Browser } from 'puppeteer-core';
 
 // verify that you can run scripts from start script in LXGE session
 // for local dev, simplify code
@@ -18,12 +19,18 @@ import { getBrowser } from './src/browser';
         process.exit();
     })
 
-    const browser = await getBrowser();
-    const page = await browser.newPage();
+    let browser: Browser
 
-    while (true) {
-        await showSpyMap(page);
-        await showFutures(page);
-        await showCrypto(page);
+    try {
+        browser = await getBrowser();
+        const page = await browser.newPage();
+
+        while (true) {
+            await showSpyMap(page);
+            await showFutures(page);
+            await showCrypto(page);
+        }
+    } catch (error: any) {
+        logger.error(error)
     }
 })();
