@@ -4,6 +4,7 @@
     "license": "MIT",
     "scripts": {
         "start": "ts-node index.ts",
+        "prod": "yarn clean && yarn build && CHROMIUM_PORT=9123 NODE_ENV=production node dist/index.js",
         "clean": "rm -rf dist",
         "build": "tsc -p ."
     },

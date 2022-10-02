@@ -14,5 +14,5 @@ git pull
 yarn
 
 # Start
-chromium-browser --start-fullscreen --remote-debugging-port="$CHROMIUM_PORT"
-CHROMIUM_PORT="$CHROMIUM_PORT" NODE_ENV=production yarn start
+chromium-browser --start-fullscreen --remote-debugging-port=$CHROMIUM_PORT &
+CHROMIUM_PORT=$CHROMIUM_PORT NODE_ENV=production yarn start
