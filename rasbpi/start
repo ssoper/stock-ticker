@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$HOME/.config/nvm/nvm.sh"
+
 STOCK_TICKER_HOME="$HOME/stock-ticker"
 CHROMIUM_PORT=9123
 
@@ -14,7 +16,5 @@ git pull
 yarn
 
 # Start
-# chromium-browser --start-fullscreen --remote-debugging-port=$CHROMIUM_PORT &
-# CHROMIUM_PORT=$CHROMIUM_PORT NODE_ENV=production yarn start
 sleep 10
 yarn prod

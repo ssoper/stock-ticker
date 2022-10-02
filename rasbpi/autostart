@@ -1,0 +1,9 @@
+# Put this in ~/.config/lxsession/LXDE-pi/autostart
+
+# Uncomment for debugging
+# @lxpanel --profile LXDE-pi
+# @pcmanfm --desktop --profile LXDE-pi
+# @xscreensaver -no-splash
+
+@chromium-browser --start-fullscreen --remote-debugging-port=9123
+@lxterminal -e /home/pi/stock-ticker/rasbpi/start
