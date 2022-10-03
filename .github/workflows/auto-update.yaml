@@ -1,0 +1,16 @@
+name: Auto Update
+
+on:
+  push:
+    branches: [dev]
+jobs:
+  autoupdate:
+    name: Auto Update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker://chinthakagodawita/autoupdate-action:v1
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          RETRY_COUNT: "2"
+          RETRY_SLEEP: "300000"
+          PR_FILTER: "protected"

@@ -5,12 +5,8 @@ import {
     showCrypto
 } from './src/finviz';
 import { getBrowser } from './src/browser';
+import { isHeatMapAvailable } from './src/market';
 import { Browser } from 'puppeteer-core';
-
-// verify that you can run scripts from start script in LXGE session
-// for local dev, simplify code
-// for production, use connection
-// add command line args for chrome in production
 
 (async () => {
     process.on('SIGINT', async () => {
@@ -26,7 +22,9 @@ import { Browser } from 'puppeteer-core';
         const page = await browser.newPage();
 
         while (true) {
-            await showSpyMap(page);
+            if (isHeatMapAvailable()) {
+                await showSpyMap(page);
+            }
             await showFutures(page);
             await showCrypto(page);
         }
