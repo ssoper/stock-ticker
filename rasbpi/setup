@@ -4,3 +4,6 @@
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.profile
 nvm use 18
+
+# Copy autostart
+cp "$HOME/stock-ticker/rasbpi/autostart" "$HOME/.config/lxsession/LXDE-pi/autostart"

@@ -17,10 +17,5 @@ Display stock prices on a screen
 
 ### Raspberry Pi
 
-* Create dead simple deployment scheme (dev -> master, rasbpi checks for git hash, pulls)
 * Create an image that includes node 18
 * Replace Raspberry Pi 4 with a 2W Zero
-* Autostart
-    * Check for new version before start and downloads it (git pull)
-    * Starts the process
-* Get rid of stupid "Restore pages?" dialog
