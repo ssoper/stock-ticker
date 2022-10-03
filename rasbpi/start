@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Wait for services (internet, chromium, etc)
+sleep 10
+
 # Load nvm environment
 source "$HOME/.config/nvm/nvm.sh"
 
@@ -16,5 +19,4 @@ git pull
 yarn
 
 # Start
-sleep 10
 yarn prod

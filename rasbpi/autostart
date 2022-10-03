@@ -7,5 +7,6 @@
 # @pcmanfm --desktop --profile LXDE-pi
 # @xscreensaver -no-splash
 
+@lxterminal -e /home/pi/stock-ticker/rasbpi/prepare
 @chromium-browser --start-fullscreen --remote-debugging-port=9123
 @lxterminal -e /home/pi/stock-ticker/rasbpi/start
