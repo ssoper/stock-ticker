@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Wait for services
+sleep 10
+
+chromium-browser --start-fullscreen --remote-debugging-port=9123

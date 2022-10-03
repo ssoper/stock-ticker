@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Wait for services (internet, chromium, etc)
-sleep 10
+# Wait for services
+sleep 15
 
 # Load nvm environment
 source "$HOME/.config/nvm/nvm.sh"

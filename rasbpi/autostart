@@ -1,5 +1,6 @@
 # Put this in ~/.config/lxsession/LXDE-pi/autostart
 # Note that this will be used instead of the default autostart at /etc/xdg/lxsession/LXDE-pi/autostart
+# More info https://forums.raspberrypi.com/viewtopic.php?t=294014
 
 # Uncomment lines below for debugging
 # Remember, you can always press Ctrl+Alt+F3 to get a terminal in X
@@ -8,5 +9,5 @@
 # @xscreensaver -no-splash
 
 @lxterminal -e /home/pi/stock-ticker/rasbpi/prepare
-@chromium-browser --start-fullscreen --remote-debugging-port=9123
-@lxterminal -e /home/pi/stock-ticker/rasbpi/start
+@lxterminal -e /home/pi/stock-ticker/rasbpi/start-chromium
+@lxterminal -e /home/pi/stock-ticker/rasbpi/start-app
