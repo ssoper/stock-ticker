@@ -1,0 +1,17 @@
+name: Tests
+
+on:
+  pull_request:
+    branches: [dev]
+jobs:
+  tests:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          test-script: yarn test --coverage
+          package-manager: yarn
