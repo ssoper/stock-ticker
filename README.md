@@ -23,3 +23,4 @@ Display stock prices on a screen
 * Autostart
     * Check for new version before start and downloads it (git pull)
     * Starts the process
+* Get rid of stupid "Restore pages?" dialog

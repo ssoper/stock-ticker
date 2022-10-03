@@ -1,6 +1,8 @@
 # Put this in ~/.config/lxsession/LXDE-pi/autostart
+# Note that this will be used instead of the default autostart at /etc/xdg/lxsession/LXDE-pi/autostart
 
-# Uncomment for debugging
+# Uncomment lines below for debugging
+# Remember, you can always press Ctrl+Alt+F3 to get a terminal in X
 # @lxpanel --profile LXDE-pi
 # @pcmanfm --desktop --profile LXDE-pi
 # @xscreensaver -no-splash
