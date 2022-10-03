@@ -11,9 +11,10 @@ Display stock prices on a screen
 
 ### Code
 
-* Do not show market map before 10am eastern or after 6pm eastern
 * Automatically calculate width of primary element vs. width of screen to get optimal scale factor for the transform style
 * Lint/pretty
+* Get rid of Upgrade your FINVIZ experience dialog
+* Heatmap hides under margin
 
 ### Raspberry Pi
 
