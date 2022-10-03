@@ -16,7 +16,7 @@ xset -dpms
 # Update
 cd "$STOCK_TICKER_HOME"
 git pull
-NODE_ENV=production yarn install --prod --ignore-scripts
+yarn
 
 # Start
 yarn prod
