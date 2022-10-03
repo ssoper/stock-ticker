@@ -17,7 +17,6 @@ jobs:
         with:
           node-version: 18
 
-      # ESLint and Prettier must be in `package.json`
       - name: Install dependencies
         run: yarn
 
@@ -25,5 +24,4 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          prettier: true
           auto_fix: true
