@@ -4,8 +4,15 @@ Display stock prices on a screen
 
 ## Setup
 
+### Development
+
 * `yarn`
 * `yarn start`
+
+### Production
+
+* `git clone --branch main https://github.com/ssoper/stock-ticker.git`
+* `./stock-ticker/rasbpi/setup`
 
 ## TODO
 
