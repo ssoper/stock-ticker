@@ -8,7 +8,7 @@
         "clean": "rm -rf dist",
         "build": "tsc -p .",
         "test": "jest",
-        "lint": "yarn run eslint src/*.ts src/**/*.ts"
+        "lint": "yarn run eslint index.ts src/**/*.ts"
     },
     "dependencies": {
         "luxon": "^3.0.4",
